@@ -89,14 +89,14 @@ def get_conversation_chain(vectordb):
     # model_name = "TheBloke/Llama-2-7B-Chat-GGUF"
 
 
-    # hf_token = os.getenv('HUGGINGFACE_TOKEN')
+    hf_token = os.getenv('HUGGINGFACE_TOKEN')
     
-    # if hf_token is None:
-    #     raise ValueError("HUGGINGFACE_TOKEN environment variable not set")
+    if hf_token is None:
+        raise ValueError("HUGGINGFACE_TOKEN environment variable not set")
     
-    # login(token=hf_token)
+    login(token=hf_token)
     
-    # st.write("HF login successfull")
+    st.write("HF login successfull")
     # load_dotenv()
    
     model_name="meta-llama/Llama-2-7b-chat-hf"
